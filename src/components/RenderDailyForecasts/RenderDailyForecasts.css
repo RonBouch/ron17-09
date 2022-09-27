@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.item-container {
+    margin: 40px;
+    padding: 40px;
+    border: 2px solid #ccc;
+    background-color: aqua;
+}
+.btn {
+    border: none;
+    color: blue;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.homePage-link {
+    font-size: 22px;
+    color: #81a135;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link {
+    text-decoration: none;
+}
+.btn-edit {
+    background-color: #81a135;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .item-container {
+        margin: 2px;
+        align-self: center;
+        border: 2px solid #ccc;
+        width: 100vh;
+        background-color: rgb(245, 237, 237);
+    }
+}
