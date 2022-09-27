@@ -1,15 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { HomePage, Favorite } from './screens'
+import { Header } from './components';
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <ToastContainer position='top-center' />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:city" element={<HomePage />} />
+          <Route path="/favorite" element={<Favorite />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
