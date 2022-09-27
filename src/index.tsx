@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { store } from './redux/store';
 import { Provider } from 'react-redux'
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { HomePage, Favorite } from './screens'
 // import { Header } from './components';
 // import "react-loader-spinner/dist/loader/css/react-spinner-load
@@ -18,17 +18,17 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           {/* <Header /> */}
           {/* <ToastContainer position='top-center' /> */}
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/:city" element={<HomePage />} />
-            <Route path="/favorite" element={<Favorite />} />
+            {/* <Route path="/:city" element={<HomePage />} /> */}
+            {/* <Route path="/favorite" element={<Favorite />} /> */}
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );
