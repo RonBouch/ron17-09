@@ -80,12 +80,12 @@ const HomePage = () => {
 
     return (
         <div className='HomePage-container'>
-            <Search
+            {/* <Search
                 searchValue={searchValue}
                 onChange={handleChangeText}
                 onPressCity={onChangeCurrentWeather}
                 onSearchClear={onSearchClear}
-            />
+            /> */}
             <div className='header-con'>
 
                 <div className='favorite'>
@@ -101,9 +101,9 @@ const HomePage = () => {
                 </div>
             </div>
             <h1>Weather App</h1>
-            {dailyForecasts && dailyForecasts.length && <RenderDailyForecasts
+            {/* {dailyForecasts && dailyForecasts.length && <RenderDailyForecasts
                 data={dailyForecasts}
-            />}
+            />} */}
 
         </div>
     )
