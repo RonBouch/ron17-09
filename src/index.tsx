@@ -18,17 +18,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
-        <div className="App">
-          {/* <Header /> */}
-          {/* <ToastContainer position='top-center' /> */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            {/* <Route path="/:city" element={<HomePage />} /> */}
-            {/* <Route path="/favorite" element={<Favorite />} /> */}
-          </Routes>
-        </div>
-      </HashRouter>
+      <div>
+        <p>FFFF</p>
+      </div>
     </Provider>
   </React.StrictMode>
 );
