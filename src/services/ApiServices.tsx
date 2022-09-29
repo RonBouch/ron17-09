@@ -13,13 +13,13 @@ export const getApiData = async (type: string, txt: string = 'tel aviv') => { //
         let data: any = null;
         switch (type) {
             case Url_Types.getCities:
-                data = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${txt}`);//localCities //
+                data = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${txt}`);//localCities //
                 break;
             case Url_Types.getDailyForecasts:
-                data = await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${txt}?apikey=${API_KEY}`);//localDailyForecasts //
+                data = await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${txt}?apikey=${API_KEY}`);//localDailyForecasts //
                 break;
             case Url_Types.getCurrentWeather:
-                data = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${txt}?apikey=${API_KEY}`);//localCurrentWeather //
+                data = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${txt}?apikey=${API_KEY}`);//localCurrentWeather //
                 break;
             default:
                 data = [];
